@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllabus Render</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  
+  <script>
+    // Fetch markdown content from the file
+    fetch('syllabus_markdown.md')
+      .then(response => response.text())
+      .then(markdown => {
+        // Render the fetched markdown content to HTML
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+      })
+      .catch(error => console.error('Error fetching markdown:', error));
+  </script>
+</body>
+</html>
