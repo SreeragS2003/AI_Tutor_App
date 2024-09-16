@@ -1,4 +1,3 @@
-// export API_KEY="AIzaSyDR_7cFY9oGvFD9KdFqpdNLdUd8qKCGL-s";
 // gemini_api.js
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
